@@ -8,7 +8,7 @@ import Single from "../pages/channel/Single";
 import Dashboard from '../pages/dashboard/Dashboard';
 import Login from '../pages/auth/Login';
 import Favorites from '../pages/favorites/Favorites';
-import Cart from '../pages/cart/Cart';
+import Cart from '../pages/drawer/Cart';
 import GridCard from "../components/gridCard/GridCard";
 import ListingCard from '../components/listCard/ListCard';
 import { List } from 'antd';

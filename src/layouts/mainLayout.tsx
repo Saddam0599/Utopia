@@ -1,23 +1,25 @@
-import React from 'react';
-import Header from '../components/header/Header';
-import Sidebar from '../components/sidebar/Sidebar';
-import Footer from '../components/footer/Footer';
-import ListPage from "../pages/listPage/ListPage";
+import Footer from '../components/ProductCard';
+import Header from '../components/header/header';
+import { Outlet, useLocation } from "react-router-dom";
+import DrawerPage from '../pages/drawer/DrawerPag';
+import { FC } from 'react';
+import { Layout } from 'antd';
 
+const { Content } = Layout;
 
+const MainLayout: FC = () => {
+  const location = useLocation();
 
-const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
-    <Header />
-    <div style={{ display: 'flex', flex: 1 }}>
-      <Sidebar />
-      <main style={{ flex: 1, padding: '20px' }}>
-        {children}
-        <ListPage/>
-      </main>
-    </div>
-    <Footer />
-  </div>
-);
+  return (
+    <Layout style={{ minHeight: "100vh", backgroundColor: "#001529", color: "white" }}>
+      <Header />
+      <DrawerPage />
+      <Content style={{ maxWidth: 1400, margin: "0 auto", padding: "20px", flex: 1 }}>
+        <Outlet />
+      </Content>
+      {location.pathname !== "/login" && location.pathname !== "/auth" && <Footer />}
+    </Layout>
+  );
+};
 
-export default Layout;
+export default MainLayout;

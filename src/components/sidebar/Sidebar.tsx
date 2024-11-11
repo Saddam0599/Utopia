@@ -48,7 +48,7 @@ const Sidebar: React.FC = () => {
   return (
     <aside className="sidebar" style={{ position: "fixed", zIndex: 1000 }}>
       <div>
-        <Link to="/">
+        <Link to={"/"}>
         <img
           src={MenuItems}
           alt="MenuItems.svg"
@@ -239,6 +239,7 @@ const Sidebar: React.FC = () => {
           borderRadius: "5px",
           marginTop: "30px",
           marginBottom: "40px",
+          
         }}
       >
         <Collapse bordered={false} expandIconPosition="end">
@@ -637,7 +638,6 @@ const Sidebar: React.FC = () => {
           style={{
             width: "148px",
             height: "45px",
-            // backgroundColor: "white",
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",

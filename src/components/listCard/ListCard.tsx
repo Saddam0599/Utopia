@@ -163,7 +163,7 @@ const ListingCard: React.FC<ListingProps> = ({ listing }) => {
           <div
             style={{
               width: "41vh",
-              height: "18px",
+              height: "14px",
               display: "flex",
               alignItems: "relative",
               marginLeft: "120px",
@@ -173,10 +173,11 @@ const ListingCard: React.FC<ListingProps> = ({ listing }) => {
 
             <PiEye
               style={{
-                width: "17px",
-                height: "17px",
+                width: "24px",
+                height: "24px",
                 color: "rgba(153, 153, 153, 1)",
-                marginLeft: "55px"
+                marginLeft: "55px",
+                marginTop: "-5px"
               }}
             />
             <h4
