@@ -1,0 +1,3 @@
+{
+  "welcomeMessage": "Welcome {{name}}! You have {{unreadMessages}} unread messages."
+}
